@@ -1,0 +1,15 @@
+{
+  "name": "joke-api",
+  "version": "1.0.0",
+  "description": "Joke API",
+  "license": "ISC",
+  "author": "Jordan Klotz",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
