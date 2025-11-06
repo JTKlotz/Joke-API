@@ -58,3 +58,30 @@ const jokes = [
         punchline: "To reach the high notes!"
     }
 ]
+
+app.use(express.json())
+
+app.use(express.static('public'))
+
+app.get('/', (request, response) =>{
+    response.sendFile('index.html', {root})
+})
+
+app.get('/joke/:id', (request, response) => {
+     response.sendFile('index.html', {root})
+})
+
+app.get('/api/v1/joke/:id', (request, response) => {
+    const {id} = request.params
+    
+    const found = jokes.find(p => p.id.toString() === id)
+    if(found) response.send(found)
+    else response.send({error: {message: `Could not find pokemon with id: ${id}`}})
+})
+
+app.get('/api/v1/random-joke', (request, response) => {
+    const r = Math.floor(Math.random()*jokes.length)
+    response.send(jokes[r])
+})
+
+app.listen(port, () => console.log(`http://localhost:${port}`))

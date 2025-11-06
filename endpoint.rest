@@ -1,0 +1,7 @@
+
+### Variable
+@url = http://localhost:3000/api/v1
+
+
+### Random Joke
+GET {{url}}/random-joke
