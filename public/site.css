@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(128, 128, 226);
+}
+#container {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
